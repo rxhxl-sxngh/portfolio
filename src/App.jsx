@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Camera } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Menu, X, Github, Linkedin, Mail, Camera } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,20 +9,21 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navbarClass = scrollPosition > 0
-    ? "fixed w-full backdrop-blur-md bg-white/70 shadow-lg z-50 transition-all duration-300"
-    : "fixed w-full bg-transparent z-50 transition-all duration-300";
+  const navbarClass =
+    scrollPosition > 0
+      ? "fixed w-full backdrop-blur-md bg-white/70 shadow-lg z-50 transition-all duration-300"
+      : "fixed w-full bg-transparent z-50 transition-all duration-300";
 
   const menuItems = [
-    { title: 'Home', path: '#home' },
-    { title: 'Projects', path: '#projects' },
-    { title: 'Experience', path: '#experience' },
-    { title: 'Photography', path: '#photography' },
-    { title: 'Contact', path: '#contact' }
+    { title: "Home", path: "#home" },
+    { title: "Projects", path: "#projects" },
+    { title: "Experience", path: "#experience" },
+    { title: "Photography", path: "#photography" },
+    { title: "Contact", path: "#contact" },
   ];
 
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
               Rahul Singh
             </span>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {menuItems.map((item) => (
@@ -54,7 +55,11 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none transition-all duration-300"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -83,8 +88,8 @@ const Navbar = () => {
 const GradientBackground = ({ children }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [tint, setTint] = useState({
-    color: 'purple',
-    opacity: 0.1
+    color: "purple",
+    opacity: 0.1,
   });
 
   useEffect(() => {
@@ -92,65 +97,63 @@ const GradientBackground = ({ children }) => {
       const position = window.scrollY;
       const height = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = (position / height) * 100;
-      
+
       // Calculate tint color and opacity based on scroll position
       let newTint = {
-        color: 'purple',
-        opacity: 0.1
+        color: "purple",
+        opacity: 0.1,
       };
-      
+
       if (scrollPercentage < 25) {
         newTint = {
-          color: 'purple',
-          opacity: 0.1 + (scrollPercentage / 25) * 0.1
+          color: "purple",
+          opacity: 0.1 + (scrollPercentage / 25) * 0.1,
         };
       } else if (scrollPercentage < 50) {
         newTint = {
-          color: 'blue',
-          opacity: 0.2 - ((scrollPercentage - 25) / 25) * 0.05
+          color: "blue",
+          opacity: 0.2 - ((scrollPercentage - 25) / 25) * 0.05,
         };
       } else if (scrollPercentage < 75) {
         newTint = {
-          color: 'indigo',
-          opacity: 0.15 + ((scrollPercentage - 50) / 25) * 0.1
+          color: "indigo",
+          opacity: 0.15 + ((scrollPercentage - 50) / 25) * 0.1,
         };
       } else {
         newTint = {
-          color: 'violet',
-          opacity: 0.25 - ((scrollPercentage - 75) / 25) * 0.15
+          color: "violet",
+          opacity: 0.25 - ((scrollPercentage - 75) / 25) * 0.15,
         };
       }
-      
+
       setTint(newTint);
       setScrollPosition(position);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="relative min-h-screen">
       {/* Base gradient background */}
       <div className="fixed inset-0 transition-all duration-500 bg-gradient-to-br from-white to-gray-50" />
-      
+
       {/* Dynamic tint overlay */}
-      <div 
+      <div
         className="fixed inset-0 transition-all duration-300"
         style={{
           backgroundColor: tint.color,
           opacity: tint.opacity,
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply",
         }}
       />
-      
+
       {/* Radial gradient accent */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-200/20 via-transparent to-indigo-200/20 animate-gradient" />
-      
+
       {/* Content container */}
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
     </div>
   );
 };
@@ -158,11 +161,16 @@ const GradientBackground = ({ children }) => {
 const ProjectCard = ({ title, description, tech }) => (
   <div className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-    <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">{title}</h3>
+    <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+      {title}
+    </h3>
     <p className="text-gray-600 mb-4">{description}</p>
     <div className="flex flex-wrap gap-2">
       {tech.map((t) => (
-        <span key={t} className="bg-gradient-to-r from-purple-100 to-indigo-100 px-3 py-1 rounded-full text-sm text-gray-700">
+        <span
+          key={t}
+          className="bg-gradient-to-r from-purple-100 to-indigo-100 px-3 py-1 rounded-full text-sm text-gray-700"
+        >
           {t}
         </span>
       ))}
@@ -173,7 +181,9 @@ const ProjectCard = ({ title, description, tech }) => (
 const ExperienceCard = ({ title, company, description }) => (
   <div className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-    <h3 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">{title}</h3>
+    <h3 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+      {title}
+    </h3>
     <p className="text-gray-600">{company}</p>
     <p className="mt-4 text-gray-600">{description}</p>
   </div>
@@ -192,39 +202,43 @@ const App = () => {
   const projects = [
     {
       title: "Architectural Application",
-      description: "Developed a sophisticated application enabling users to define building dimensions, extrude complex structures, implement scaffolding systems, and automatically generate Bills of Materials (BOM).",
-      tech: ["React", "Three.js", "Node.js", "CAD Integration"]
+      description:
+        "Developed a sophisticated application enabling users to define building dimensions, extrude complex structures, implement scaffolding systems, and automatically generate Bills of Materials (BOM).",
+      tech: ["React", "Three.js", "Node.js", "CAD Integration"],
     },
     {
       title: "Machine Learning Projects",
-      description: "Implemented various ML algorithms and models for real-world applications, focusing on computer vision and natural language processing tasks.",
-      tech: ["Python", "TensorFlow", "PyTorch", "OpenCV"]
-    }
+      description:
+        "Implemented various ML algorithms and models for real-world applications, focusing on computer vision and natural language processing tasks.",
+      tech: ["Python", "TensorFlow", "PyTorch", "OpenCV"],
+    },
   ];
 
   const experiences = [
     {
       title: "AI/ML Engineer",
       company: "Software Consulting Company",
-      description: "Contributed to real-world projects and gained valuable industry insights in machine learning and artificial intelligence."
+      description:
+        "Contributed to real-world projects and gained valuable industry insights in machine learning and artificial intelligence.",
     },
     {
       title: "Teaching Assistant",
       company: "CSCE 121 - Texas A&M University",
-      description: "Helped fellow students grasp complex programming concepts and developed strong instructional capabilities."
-    }
+      description:
+        "Helped fellow students grasp complex programming concepts and developed strong instructional capabilities.",
+    },
   ];
 
   const photoCategories = [
     "Travel Photography",
     "Nature Photography",
-    "Urban Photography"
+    "Urban Photography",
   ];
 
   return (
     <GradientBackground>
       <Navbar />
-      
+
       <main className="pt-16">
         {/* Hero Section */}
         <section id="home" className="py-20">
@@ -234,16 +248,27 @@ const App = () => {
                 Software Engineer & ML Enthusiast
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Senior Computer Science student at Texas A&M University, passionate about developing scalable systems and advancing machine learning.
+                Senior Computer Science student at Texas A&M University,
+                passionate about developing scalable systems and advancing
+                machine learning.
               </p>
               <div className="mt-8 flex justify-center space-x-6">
-                <a href="https://github.com/rxhxl-sxngh" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
+                <a
+                  href="https://github.com/rxhxl-sxngh"
+                  className="text-gray-400 hover:text-indigo-600 transition-colors duration-300"
+                >
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="https://www.linkedin.com/in/rahul-singh3253/" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
+                <a
+                  href="https://www.linkedin.com/in/rahul-singh3253/"
+                  className="text-gray-400 hover:text-indigo-600 transition-colors duration-300"
+                >
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=rahul.do.singh@gmail.com&tf=1" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
+                <a
+                  href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=rahul.do.singh@gmail.com&tf=1"
+                  className="text-gray-400 hover:text-indigo-600 transition-colors duration-300"
+                >
                   <Mail className="h-6 w-6" />
                 </a>
               </div>
@@ -254,7 +279,9 @@ const App = () => {
         {/* Projects Section */}
         <section id="projects" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">Projects</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
+              Projects
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {projects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -266,7 +293,9 @@ const App = () => {
         {/* Experience Section */}
         <section id="experience" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">Experience</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
+              Experience
+            </h2>
             <div className="space-y-8">
               {experiences.map((experience, index) => (
                 <ExperienceCard key={index} {...experience} />
@@ -278,7 +307,9 @@ const App = () => {
         {/* Photography Section */}
         <section id="photography" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">Photography</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
+              Photography
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {photoCategories.map((category, index) => (
                 <PhotoCard key={index} category={category} />
@@ -290,18 +321,29 @@ const App = () => {
         {/* Contact Section */}
         <section id="contact" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">Contact</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
+              Contact
+            </h2>
             <div className="max-w-lg mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
               <div className="flex flex-col space-y-4">
-                <a href="mailto:rahul.do.singh@example.com" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+                <a
+                  href="mailto:rahul.do.singh@example.com"
+                  className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                >
                   <Mail className="h-5 w-5" />
                   <span>Email me</span>
                 </a>
-                <a href="https://github.com/rxhxl-sxngh" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+                <a
+                  href="https://github.com/rxhxl-sxngh"
+                  className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                >
                   <Github className="h-5 w-5" />
                   <span>GitHub</span>
                 </a>
-                <a href="https://linkedin.com/in/rahul-singh3253" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+                <a
+                  href="https://linkedin.com/in/rahul-singh3253"
+                  className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                >
                   <Linkedin className="h-5 w-5" />
                   <span>LinkedIn</span>
                 </a>
@@ -314,7 +356,10 @@ const App = () => {
         <footer className="py-6 bg-indigo/70 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center text-gray-600">
-              <p>&copy; {new Date().getFullYear()} Rahul Singh. All rights reserved.</p>
+              <p>
+                &copy; {new Date().getFullYear()} Rahul Singh. All rights
+                reserved.
+              </p>
             </div>
           </div>
         </footer>
