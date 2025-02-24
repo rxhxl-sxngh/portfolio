@@ -237,13 +237,13 @@ const App = () => {
                 Senior Computer Science student at Texas A&M University, passionate about developing scalable systems and advancing machine learning.
               </p>
               <div className="mt-8 flex justify-center space-x-6">
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
+                <a href="https://github.com/rxhxl-sxngh" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
                   <Github className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/rahul-singh3253/" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
+                <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=rahul.do.singh@gmail.com&tf=1" className="text-gray-400 hover:text-indigo-600 transition-colors duration-300">
                   <Mail className="h-6 w-6" />
                 </a>
               </div>
@@ -293,15 +293,15 @@ const App = () => {
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">Contact</h2>
             <div className="max-w-lg mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
               <div className="flex flex-col space-y-4">
-                <a href="mailto:your.email@example.com" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+                <a href="mailto:rahul.do.singh@example.com" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
                   <Mail className="h-5 w-5" />
                   <span>Email me</span>
                 </a>
-                <a href="https://github.com/yourusername" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+                <a href="https://github.com/rxhxl-sxngh" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
                   <Github className="h-5 w-5" />
                   <span>GitHub</span>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+                <a href="https://linkedin.com/in/rahul-singh3253" className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300">
                   <Linkedin className="h-5 w-5" />
                   <span>LinkedIn</span>
                 </a>
@@ -309,6 +309,15 @@ const App = () => {
             </div>
           </div>
         </section>
+
+        {/* Footer */}
+        <footer className="py-6 bg-indigo/70 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center text-gray-600">
+              <p>&copy; {new Date().getFullYear()} Rahul Singh. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
       </main>
     </GradientBackground>
   );
