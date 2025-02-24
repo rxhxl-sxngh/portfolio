@@ -6,12 +6,38 @@ const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+          
+          // Update URL without causing page jump
+          window.history.pushState(null, null, targetId);
+          
+          // Close mobile menu if open
+          if (isOpen) {
+            setIsOpen(false);
+          }
+        }
+      });
+    });
+    
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
 
   const navbarClass =
     scrollPosition > 0
@@ -19,11 +45,9 @@ const Navbar = () => {
       : "fixed w-full bg-transparent z-50 transition-all duration-300";
 
   const menuItems = [
-    { title: "Home", path: "#home" },
     { title: "Projects", path: "#projects" },
     { title: "Experience", path: "#experience" },
     { title: "Photography", path: "#photography" },
-    { title: "Contact", path: "#contact" },
   ];
 
   return (
@@ -31,9 +55,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <a 
+              href="#home" 
+              className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 relative group transition-all duration-300"
+            >
               Rahul Singh
-            </span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
+            </a>
           </div>
 
           <div className="hidden md:block">
@@ -42,9 +70,10 @@ const Navbar = () => {
                 <a
                   key={item.title}
                   href={item.path}
-                  className="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300"
+                  className="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium relative group transition-all duration-300 hover:scale-105"
                 >
                   {item.title}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
                 </a>
               ))}
             </div>
@@ -72,10 +101,11 @@ const Navbar = () => {
               <a
                 key={item.title}
                 href={item.path}
-                className="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
+                className="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium relative group transition-all duration-300 hover:scale-105"
                 onClick={() => setIsOpen(false)}
               >
                 {item.title}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>
@@ -241,7 +271,7 @@ const App = () => {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section id="home" className="py-20">
+        <section id="home" className="min-h-screen flex items-center justify-center py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent sm:text-6xl md:text-7xl mb-4">
@@ -277,8 +307,8 @@ const App = () => {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="min-h-screen flex items-center py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
               Projects
             </h2>
@@ -291,8 +321,8 @@ const App = () => {
         </section>
 
         {/* Experience Section */}
-        <section id="experience" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="experience" className="min-h-screen flex items-center py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
               Experience
             </h2>
@@ -305,8 +335,8 @@ const App = () => {
         </section>
 
         {/* Photography Section */}
-        <section id="photography" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="photography" className="min-h-screen flex items-center py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
               Photography
             </h2>
@@ -318,48 +348,41 @@ const App = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20">
+
+
+        {/* Footer */}
+        <footer className="py-8 bg-indigo-50/70 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
-              Contact
-            </h2>
-            <div className="max-w-lg mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="flex flex-col space-y-4">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <div className="flex space-x-6">
                 <a
-                  href="mailto:rahul.do.singh@example.com"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                  href="mailto:rahul.do.singh@gmail.com"
+                  className="text-gray-500 hover:text-indigo-600 transition-colors duration-300"
+                  aria-label="Email"
                 >
-                  <Mail className="h-5 w-5" />
-                  <span>Email me</span>
+                  <Mail className="h-6 w-6" />
                 </a>
                 <a
                   href="https://github.com/rxhxl-sxngh"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                  className="text-gray-500 hover:text-indigo-600 transition-colors duration-300"
+                  aria-label="GitHub"
                 >
-                  <Github className="h-5 w-5" />
-                  <span>GitHub</span>
+                  <Github className="h-6 w-6" />
                 </a>
                 <a
                   href="https://linkedin.com/in/rahul-singh3253"
-                  className="flex items-center space-x-3 text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                  className="text-gray-500 hover:text-indigo-600 transition-colors duration-300"
+                  aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-5 w-5" />
-                  <span>LinkedIn</span>
+                  <Linkedin className="h-6 w-6" />
                 </a>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="py-6 bg-indigo/70 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-gray-600">
-              <p>
-                &copy; {new Date().getFullYear()} Rahul Singh. All rights
-                reserved.
-              </p>
+              <div className="text-center text-gray-600">
+                <p>
+                  &copy; {new Date().getFullYear()} Rahul Singh. All rights
+                  reserved.
+                </p>
+              </div>
             </div>
           </div>
         </footer>
