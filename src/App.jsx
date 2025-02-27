@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Mail, Camera } from "lucide-react";
+import FlippingLogo from "./FlippingLogo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -323,6 +324,7 @@ const App = () => {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
+            <FlippingLogo />
               <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent sm:text-6xl md:text-7xl mb-4">
                 Software Engineer & ML Enthusiast
               </h1>
