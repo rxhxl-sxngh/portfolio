@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Mail, Camera } from "lucide-react";
 import FlippingLogo from "./FlippingLogo";
+import ScaffoldingProjectCard from './ScaffoldingProjectCard';
+import Projects from "./Projects";
+import ScaffoldingVisualization from "./ScaffoldingVisualization";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -325,8 +328,8 @@ const App = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
             <FlippingLogo />
-              <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent sm:text-6xl md:text-7xl mb-4">
-                Software Engineer & ML Enthusiast
+              <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4 leading-tight">
+                Software Developer & ML Enthusiast
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 Senior Computer Science student at Texas A&M University,
@@ -481,7 +484,7 @@ const App = () => {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="min-h-screen flex items-center py-20">
+        {/* <section id="projects" className="min-h-screen flex items-center py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-8">
               Projects
@@ -492,7 +495,8 @@ const App = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
+        <Projects />
 
         {/* Experience Section */}
         <section
