@@ -27,7 +27,7 @@ const BaseballAnalyticsCard = () => {
             <button onClick={() => setIsPanelOpen(true)} className="text-left">
               <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent inline-block">
                 <span className="border-b border-transparent hover:border-indigo-600 transition-all duration-300">
-                  Baseball Umpire Decision Analysis
+                  Machine Learning Applied to Baseball (Texas A&M Baseball Research And Development Team)
                 </span>
               </h3>
             </button>
@@ -76,16 +76,13 @@ const BaseballAnalyticsCard = () => {
                     Enhanced understanding of umpire decision-making processes
                   </li>
                   <li>
-                    Identified patterns that could lead to fairer and more
-                    consistent officiating
+                    Provided Texas A&M's coaching staff with actionable insights on how specific umpires make ball/strike decisions
                   </li>
                   <li>
-                    Demonstrated the powerful intersection of sports analytics
-                    and machine learning
+                    Developed strategic advantages for Aggie batters by identifying umpire-specific strike zone tendencies
                   </li>
                   <li>
-                    Created a foundation for future improvements in baseball
-                    officiating technology
+                    Created pitch selection recommendations for A&M pitchers based on individual umpire bias patterns
                   </li>
                 </ul>
               </div>
