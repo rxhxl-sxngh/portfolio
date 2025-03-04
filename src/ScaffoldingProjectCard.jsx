@@ -1,9 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ScaffoldingVisualization from './ScaffoldingVisualization';
 
 const ScaffoldingProjectCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+
+  // Prevent scrolling on the background when panel is open
+  useEffect(() => {
+    if (isPanelOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isPanelOpen]);
+  
+  // Add event listeners to close panel when navbar items are clicked
+  useEffect(() => {
+    if (isPanelOpen) {
+      // Get all navbar links (assuming they have href starting with #)
+      const navbarLinks = document.querySelectorAll('a[href^="#"]');
+      
+      const handleNavClick = () => {
+        setIsPanelOpen(false);
+      };
+      
+      // Add click event listeners to all navbar links
+      navbarLinks.forEach(link => {
+        link.addEventListener('click', handleNavClick);
+      });
+      
+      // Clean up event listeners when component unmounts or panel closes
+      return () => {
+        navbarLinks.forEach(link => {
+          link.removeEventListener('click', handleNavClick);
+        });
+      };
+    }
+  }, [isPanelOpen]);
 
   return (
     <>
@@ -102,22 +139,60 @@ const ScaffoldingProjectCard = () => {
         </div>
       </div>
       
-      {/* Visualization Panel */}
+      {/* Visualization Panel - Modified to match BaseballDetailPanel.jsx */}
       {isPanelOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn">
-          <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-auto">
-            <div className="p-1 flex justify-end">
+        <div 
+          className="fixed inset-x-0 bottom-0 z-50 flex justify-end" 
+          style={{ 
+            zIndex: 9999,
+            top: '2rem' // Set to 2rem to keep navbar visible
+          }}
+        >
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+            onClick={() => setIsPanelOpen(false)}
+          />
+          
+          {/* Panel */}
+          <div 
+            className="relative bg-white w-full max-w-4xl overflow-y-auto"
+            style={{
+              transform: isPanelOpen ? 'translateX(0)' : 'translateX(100%)',
+              transition: 'transform 0.3s ease-out',
+              height: 'calc(100vh - 2rem)' // Updated to match the 2rem top value
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="sticky top-0 flex items-center justify-between p-4 border-b bg-white z-10">
+              <h2 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Scaffolding Graphics Visualization
+              </h2>
               <button 
-                onClick={() => setIsPanelOpen(false)} 
-                className="rounded-full p-2 hover:bg-gray-100 transition-colors"
+                onClick={() => setIsPanelOpen(false)}
+                className="text-gray-500 hover:text-gray-700 p-2"
+                aria-label="Close panel"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x">
-                  <path d="M18 6 6 18"></path>
-                  <path d="m6 6 12 12"></path>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
               </button>
             </div>
-            <div className="px-6 pb-6">
+            
+            {/* Content */}
+            <div className="p-6 pb-12">
               <ScaffoldingVisualization />
             </div>
           </div>

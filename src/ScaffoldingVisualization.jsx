@@ -12,11 +12,7 @@ const ScaffoldingVisualization = () => {
   ];
 
   return (
-    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-        Scaffolding Graphics Visualization
-      </h3>
-
+    <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 overflow-hidden">
       <div className="flex flex-col md:flex-row gap-6">
         {/* SVG Visualization */}
         <div 
@@ -58,9 +54,9 @@ const ScaffoldingVisualization = () => {
                   setActiveFeature(activeFeature === feature.id ? null : feature.id);
                 }}
               >
-                {feature.id === 'dims' ? 'D' : 
-                 feature.id === 'extrude' ? 'E' : 
-                 feature.id === 'scaffold' ? 'S' : 'B'}
+                {feature.id === 'dims' ? '1' : 
+                 feature.id === 'extrude' ? '2' : 
+                 feature.id === 'scaffold' ? '3' : '4'}
 
                 {activeFeature === feature.id && (
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg rounded p-3 w-48 z-10 text-gray-800">
@@ -75,7 +71,7 @@ const ScaffoldingVisualization = () => {
 
         {/* Feature descriptions - only shown when not zoomed */}
         {!isZoomed && (
-          <div className="w-full md:w-1/3 space-y-4">
+          <div className="w-full md:w-1/3 space-y-4 p-4">
             <h4 className="font-semibold text-indigo-600">Interactive Features</h4>
             <div className="space-y-3">
               {features.map((feature) => (
@@ -93,7 +89,7 @@ const ScaffoldingVisualization = () => {
         )}
       </div>
 
-      <div className="text-center mt-4 text-sm text-gray-500">
+      <div className="text-center mt-4 text-sm text-gray-500 pb-4">
         <p>Interactive visualization of the Scaffolding Graphics application showcasing key features and capabilities</p>
       </div>
     </div>
