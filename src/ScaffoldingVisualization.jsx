@@ -6,10 +6,26 @@ const ScaffoldingVisualization = () => {
   const [activeFeature, setActiveFeature] = useState(null);
 
   const features = [
-    { id: 'dims', name: 'Building Dimensions', description: 'Define precise measurements for width, height, and depth of structures' },
-    { id: 'extrude', name: 'Structure Extrusion', description: 'Convert 2D shapes into 3D structures with dynamic controls' },
-    { id: 'scaffold', name: 'Automated Scaffolding', description: 'Generate scaffolding components based on building specifications' },
-    { id: 'bom', name: 'Bill of Materials', description: 'Real-time generation of complete parts list with export options' },
+    {
+      id: 'dims',
+      name: 'Building Dimensions',
+      description: 'Define exact measurements for building structures with interactive tools for width, height, and depth inputs'
+    },
+    {
+      id: 'scaffold',
+      name: 'Scaffolding Types',
+      description: 'Generate and select from different scaffolding configurations including "Stillas dekket med netting" (scaffolding with netting) and "Stillas dekket med presenning" (scaffolding with tarpaulin)'
+    },
+    {
+      id: 'extrude',
+      name: '3D Structure Generation',
+      description: 'Extrude 2D floor plans into 3D structures with customizable roof styles and height adjustments'
+    },
+    {
+      id: 'bom',
+      name: 'Bill of Materials',
+      description: 'Automated generation of parts list tracking all components including spacing requirements'
+    },
   ];
 
   useEffect(() => {
@@ -36,11 +52,11 @@ const ScaffoldingVisualization = () => {
               className="group w-full h-full cursor-pointer"
               onClick={() => setIsZoomed(true)}
             >
-              <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded overflow-hidden">
+              <div className="w-full h-full flex items-center justify-center bg-black rounded">
                 <img 
                   src="/src/assets/scaffolding.svg" 
                   alt="Scaffolding Visualization" 
-                  className="max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="max-h-full object-contain transition-transform duration-300 group-hover:scale-105 overflow-hidden"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
                   <span className="bg-black/70 text-white px-3 py-1 rounded-full text-sm">
@@ -56,12 +72,12 @@ const ScaffoldingVisualization = () => {
                 key={feature.id}
                 className="absolute w-6 h-6 rounded-full bg-indigo-500 cursor-pointer hover:bg-purple-600 transition-colors duration-300 flex items-center justify-center text-white font-bold text-xs"
                 style={{
-                  top: feature.id === 'dims' ? '15%' : 
-                       feature.id === 'extrude' ? '40%' : 
-                       feature.id === 'scaffold' ? '65%' : '85%',
-                  left: feature.id === 'dims' ? '20%' : 
-                        feature.id === 'extrude' ? '75%' : 
-                        feature.id === 'scaffold' ? '30%' : '70%',
+                  top: feature.id === 'dims' ? '45.5%' :
+                       feature.id === 'scaffold' ? '48%' :
+                       feature.id === 'extrude' ? '35%' : '14.2%',
+                  left: feature.id === 'dims' ? '89.5%' :
+                        feature.id === 'scaffold' ? '17%' :
+                        feature.id === 'extrude' ? '67%' : '92.17%',
                 }}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -69,8 +85,8 @@ const ScaffoldingVisualization = () => {
                 }}
               >
                 {feature.id === 'dims' ? '1' : 
-                 feature.id === 'extrude' ? '2' : 
-                 feature.id === 'scaffold' ? '3' : '4'}
+                 feature.id === 'scaffold' ? '2' : 
+                 feature.id === 'extrude' ? '3' : '4'}
 
                 {activeFeature === feature.id && (
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg rounded p-3 w-48 z-10 text-gray-800">
@@ -84,7 +100,7 @@ const ScaffoldingVisualization = () => {
         </div>
 
         {/* Feature Descriptions */}
-        <div className="w-full md:w-1/3 space-y-4 p-4">
+        <div className="w-full md:w-3/6 space-y-4 p-4">
           <h4 className="font-semibold text-indigo-600">Interactive Features</h4>
           <div className="space-y-3">
             {features.map((feature) => (
@@ -106,7 +122,7 @@ const ScaffoldingVisualization = () => {
       {/* Full Screen Overlay */}
       {isZoomed && (
         <div 
-          className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-xl flex items-center justify-center p-4"
+          className="fixed inset-0 z-[9999] bg-black backdrop-blur-xl flex items-center justify-center p-4"
           onClick={() => setIsZoomed(false)}
         >
           <div className="relative w-full h-full max-w-6xl flex items-center justify-center">

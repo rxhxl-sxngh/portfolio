@@ -156,7 +156,7 @@ const ScaffoldingProjectCard = () => {
           
           {/* Panel */}
           <div 
-            className="relative bg-white w-full max-w-4xl overflow-y-auto"
+            className="relative bg-white w-full max-w-5xl overflow-y-auto"
             style={{
               transform: isPanelOpen ? 'translateX(0)' : 'translateX(100%)',
               transition: 'transform 0.3s ease-out',
