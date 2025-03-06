@@ -56,7 +56,7 @@ const BaseballDetailPanel = ({ isOpen, onClose }) => {
       
       {/* Panel */}
       <div 
-        className="relative bg-white w-full max-w-4xl overflow-y-auto"
+        className="relative bg-white w-full w-[60vw] overflow-y-auto"
         style={{
           transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 0.3s ease-out',
