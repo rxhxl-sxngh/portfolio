@@ -160,7 +160,7 @@ const RobotDetailPanel = ({ isOpen, onClose }) => {
             
             <div className="bg-gray-100 rounded-lg p-4 my-4 flex items-center justify-center h-128">
               <img 
-                src="/src/assets/lidar-mapping2.webp" 
+                src="/src/assets/lidar-mapping.gif" 
                 alt="LiDAR Mapping Visualization" 
                 className="max-h-full object-contain rounded"
               />
