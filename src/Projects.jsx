@@ -1,6 +1,7 @@
 import React from 'react';
 import ScaffoldingProjectCard from './ScaffoldingProjectCard.jsx';
 import BaseballAnalyticsCard from './BaseballAnalyticsCard.jsx';
+import RobotCard from './RobotCard.jsx';
 
 const ProjectCard = ({ title, description, tech }) => (
   <div className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
@@ -29,13 +30,13 @@ const Projects = () => {
       description:
         "Co-founded an independent agency specializing in building software for 2D/3D modeling within the web graphics sector. Managed projects ranging from $50,000 to $60,000 with a 97% success rate and 90% project transition to build phase.",
       tech: ["React", "ThreeJS", "WebGL", "Node.js", "Project Management"],
-    },
-    {
-      title: "Maze-Solving Robot",
-      description:
-        "Developed a robot equipped with LiDAR scanner and RPLidar ROS integration, enabling precise navigation through complex mazes. Contributed to research, FEA analysis, SolidWorks design, and manufacturing processes.",
-      tech: ["ROS", "LiDAR", "C++", "SolidWorks", "FEA Analysis"],
     }
+    // {
+    //   title: "Maze-Solving Robot",
+    //   description:
+    //     "Developed a robot equipped with LiDAR scanner and RPLidar ROS integration, enabling precise navigation through complex mazes. Contributed to research, FEA analysis, SolidWorks design, and manufacturing processes.",
+    //   tech: ["ROS", "LiDAR", "C++", "SolidWorks", "FEA Analysis"],
+    // }
   ];
 
   return (
@@ -50,6 +51,9 @@ const Projects = () => {
           
           {/* Featured Project - Baseball Analytics */}
           <BaseballAnalyticsCard />
+
+          {/* Featured Project - Baseball Analytics */}
+          <RobotCard />
           
           {/* Other Projects */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
