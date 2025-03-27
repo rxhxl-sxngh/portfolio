@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BaseballDetailPanel from "./BaseballDetailPanel";
+import baseball1 from "./assets/baseball-diagram.webp";
 
 const BaseballAnalyticsCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,7 +16,7 @@ const BaseballAnalyticsCard = () => {
           <div className="w-full md:w-1/3 flex-shrink-0">
             <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-4 flex items-center justify-center h-64">
               <img
-                src="/src/assets/baseball-diagram.webp"
+                src={baseball1}
                 alt="Baseball Analytics Visualization"
                 className="max-h-full rounded shadow-sm"
               />
@@ -27,7 +28,8 @@ const BaseballAnalyticsCard = () => {
             <button onClick={() => setIsPanelOpen(true)} className="text-left">
               <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent inline-block">
                 <span className="border-b border-transparent hover:border-indigo-600 transition-all duration-300">
-                  Machine Learning Applied to Baseball (Texas A&M Baseball Research And Development Team)
+                  Machine Learning Applied to Baseball (Texas A&M Baseball
+                  Research And Development Team)
                 </span>
               </h3>
             </button>
@@ -76,13 +78,16 @@ const BaseballAnalyticsCard = () => {
                     Enhanced understanding of umpire decision-making processes
                   </li>
                   <li>
-                    Provided Texas A&M's coaching staff with actionable insights on how specific umpires make ball/strike decisions
+                    Provided Texas A&M's coaching staff with actionable insights
+                    on how specific umpires make ball/strike decisions
                   </li>
                   <li>
-                    Developed strategic advantages for Aggie batters by identifying umpire-specific strike zone tendencies
+                    Developed strategic advantages for Aggie batters by
+                    identifying umpire-specific strike zone tendencies
                   </li>
                   <li>
-                    Created pitch selection recommendations for A&M pitchers based on individual umpire bias patterns
+                    Created pitch selection recommendations for A&M pitchers
+                    based on individual umpire bias patterns
                   </li>
                 </ul>
               </div>

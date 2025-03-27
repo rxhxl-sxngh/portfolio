@@ -1,4 +1,10 @@
 import React, { useEffect } from 'react';
+import baseball1 from "./assets/baseball-diagram.webp";
+import baseball2 from "./assets/baseball-diagram2.webp";
+import baseball3 from "./assets/baseball-diagram3.webp";
+import baseball4 from "./assets/baseball-diagram4.webp";
+import baseball5 from "./assets/baseball-diagram5.webp";
+import baseball6 from "./assets/baseball-diagram6.webp";
 
 const BaseballDetailPanel = ({ isOpen, onClose }) => {
   // Prevent scrolling on the background when panel is open
@@ -103,7 +109,7 @@ const BaseballDetailPanel = ({ isOpen, onClose }) => {
             
             <div className="bg-gray-100 rounded-lg p-4 my-4 flex items-center justify-center h-128">
               <img 
-                src="/src/assets/baseball-diagram.webp" 
+                src={baseball1} 
                 alt="Baseball Analysis Diagram" 
                 className="max-h-full object-contain rounded"
               />
@@ -138,14 +144,14 @@ const BaseballDetailPanel = ({ isOpen, onClose }) => {
             <div className="space-y-6 my-4">
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-128">
                 <img 
-                  src="/src/assets/baseball-diagram2.webp" 
+                  src={baseball2} 
                   alt="Baseball Data Collection" 
                   className="max-h-full object-contain rounded"
                 />
               </div>
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-128">
                 <img 
-                  src="/src/assets/baseball-diagram3.webp" 
+                  src={baseball3}
                   alt="Baseball Data Preprocessing" 
                   className="max-h-full object-contain rounded"
                 />
@@ -195,21 +201,21 @@ const BaseballDetailPanel = ({ isOpen, onClose }) => {
             <div className="space-y-6 my-4">
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-84">
                 <img 
-                  src="/src/assets/baseball-diagram4.webp" 
+                  src={baseball4} 
                   alt="Baseball Visualization 1" 
                   className="max-h-full object-contain rounded"
                 />
               </div>
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-128">
                 <img 
-                  src="/src/assets/baseball-diagram5.webp" 
+                  src={baseball5} 
                   alt="Baseball Visualization 2" 
                   className="max-h-full object-contain rounded"
                 />
               </div>
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-128">
                 <img 
-                  src="/src/assets/baseball-diagram6.webp" 
+                  src={baseball6} 
                   alt="Baseball Visualization 3" 
                   className="max-h-full object-contain rounded"
                 />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import scaffolding from './assets/scaffolding.svg';
 
 const ScaffoldingVisualization = () => {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -54,7 +55,7 @@ const ScaffoldingVisualization = () => {
             >
               <div className="w-full h-full flex items-center justify-center bg-black rounded">
                 <img 
-                  src="/src/assets/scaffolding.svg" 
+                  src={scaffolding} 
                   alt="Scaffolding Visualization" 
                   className="max-h-full object-contain transition-transform duration-300 group-hover:scale-105 overflow-hidden"
                 />
@@ -127,7 +128,7 @@ const ScaffoldingVisualization = () => {
         >
           <div className="relative w-full h-full max-w-6xl flex items-center justify-center">
             <img
-              src="/src/assets/scaffolding.svg"
+              src={scaffolding}
               alt="Scaffolding Visualization (Full Screen)"
               className="max-h-full max-w-full object-contain animate-fadeIn"
             />

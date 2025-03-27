@@ -25,12 +25,12 @@ const ProjectCard = ({ title, description, tech }) => (
 
 const Projects = () => {
   const otherProjects = [
-    {
-      title: "Quaternion Studios Portfolio",
-      description:
-        "Co-founded an independent agency specializing in building software for 2D/3D modeling within the web graphics sector. Managed projects ranging from $50,000 to $60,000 with a 97% success rate and 90% project transition to build phase.",
-      tech: ["React", "ThreeJS", "WebGL", "Node.js", "Project Management"],
-    }
+    // {
+    //   title: "Quaternion Studios Portfolio",
+    //   description:
+    //     "Co-founded an independent agency specializing in building software for 2D/3D modeling within the web graphics sector. Managed projects ranging from $50,000 to $60,000 with a 97% success rate and 90% project transition to build phase.",
+    //   tech: ["React", "ThreeJS", "WebGL", "Node.js", "Project Management"],
+    // }
     // {
     //   title: "Maze-Solving Robot",
     //   description:

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ScaffoldingVisualization from './ScaffoldingVisualization';
+import scaffolding from './assets/scaffolding.svg';
 
 const ScaffoldingProjectCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -52,7 +53,7 @@ const ScaffoldingProjectCard = () => {
           <div className="w-full md:w-1/3 flex-shrink-0">
             <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-4 flex items-center justify-center h-64">
               <img 
-                src="/src/assets/scaffolding.svg" 
+                src={scaffolding} 
                 alt="Scaffolding Application Screenshot" 
                 className="max-h-full rounded shadow-sm"
               />

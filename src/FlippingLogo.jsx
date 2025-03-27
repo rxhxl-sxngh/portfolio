@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from './assets/rs-logo.svg';
+import profilePhoto from './assets/profile-photo.jpg';
 
 const FlippingLogo = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -27,7 +29,7 @@ const FlippingLogo = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
             <img 
-              src="/src/assets/rs-logo.svg" 
+              src={logo} 
               alt="Rahul Singh Logo" 
               className="w-full h-full object-contain p-2"
             />
@@ -41,7 +43,7 @@ const FlippingLogo = () => {
             <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
             <img 
-              src="/src/assets/profile-photo.jpg" 
+              src={profilePhoto}
               alt="Rahul Singh" 
               className="w-full h-full object-cover rounded-full p-2"
             />

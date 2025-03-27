@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RobotDetailPanel from "./RobotDetailPanel";
+import mazeRobot1 from "./assets/maze-robot.png";
 
 const RobotCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,7 +16,7 @@ const RobotCard = () => {
           <div className="w-full md:w-1/3 flex-shrink-0">
             <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-4 flex items-center justify-center h-64">
               <img
-                src="/src/assets/maze-robot.png"
+                src={mazeRobot1}
                 alt="LiDAR Maze-Solving Robot"
                 className="max-h-full rounded shadow-sm"
               />

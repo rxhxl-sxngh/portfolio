@@ -1,4 +1,9 @@
 import React, { useEffect } from 'react';
+import mazeRobot1 from "./assets/maze-robot.png";
+import lidarMapping from "./assets/lidar-mapping.gif";
+import bezier from "./assets/bezier-curves.webp";
+import pathPlanning from "./assets/path-planning.webp";
+import jetson from "./assets/jetson-nano.webp";
 
 const RobotDetailPanel = ({ isOpen, onClose }) => {
   // Prevent scrolling on the background when panel is open
@@ -103,7 +108,7 @@ const RobotDetailPanel = ({ isOpen, onClose }) => {
             
             <div className="bg-gray-100 rounded-lg p-4 my-4 flex items-center justify-center h-128">
               <img 
-                src="/src/assets/maze-robot.png" 
+                src={mazeRobot1} 
                 alt="LiDAR Maze-Solving Robot" 
                 className="max-h-full object-contain rounded"
               />
@@ -160,7 +165,7 @@ const RobotDetailPanel = ({ isOpen, onClose }) => {
             
             <div className="bg-gray-100 rounded-lg p-4 my-4 flex items-center justify-center h-128">
               <img 
-                src="/src/assets/lidar-mapping.gif" 
+                src={lidarMapping} 
                 alt="LiDAR Mapping Visualization" 
                 className="max-h-full object-contain rounded"
               />
@@ -192,14 +197,14 @@ const RobotDetailPanel = ({ isOpen, onClose }) => {
             <div className="space-y-6 my-4">
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-128">
                 <img 
-                  src="/src/assets/bezier-curves.webp" 
+                  src={bezier} 
                   alt="Bezier Curve Smoothing" 
                   className="max-h-full object-contain rounded"
                 />
               </div>
               <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center h-128">
                 <img 
-                  src="/src/assets/path-planning.webp" 
+                  src={pathPlanning} 
                   alt="Path Planning Visualization" 
                   className="max-h-full object-contain rounded"
                 />
@@ -273,7 +278,7 @@ const RobotDetailPanel = ({ isOpen, onClose }) => {
             </p>
             <div className="bg-gray-100 rounded-lg p-4 my-4 flex items-center justify-center h-128">
               <img 
-                src="/src/assets/jetson-nano.webp" 
+                src={jetson} 
                 alt="ROS 2 Node Architecture" 
                 className="max-h-full object-contain rounded"
               />
