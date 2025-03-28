@@ -48,7 +48,7 @@ const Navbar = () => {
     { title: "About", path: "#about" },
     { title: "Projects", path: "#projects" },
     { title: "Experience", path: "#experience" },
-    { title: "Photography", path: "#photography" },
+    { title: "Blog", path: "#blog" },
   ];
 
   return (
