@@ -57,9 +57,9 @@ const RobotCard = () => {
                   <li>
                     Created comprehensive visualization tools for real-time debugging and monitoring
                   </li>
-                  <li>
+                  {/* <li>
                     Established CI/CD pipeline with GitHub Actions for automated testing of navigation algorithms
-                  </li>
+                  </li> */}
                 </ul>
 
                 <h4 className="font-semibold text-indigo-600 mt-4">
