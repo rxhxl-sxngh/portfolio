@@ -41,8 +41,8 @@ const Navbar = () => {
 
   const navbarClass =
     scrollPosition > 0
-      ? "fixed w-full backdrop-blur-md bg-white/70 shadow-lg z-50 transition-all duration-300"
-      : "fixed w-full bg-transparent z-50 transition-all duration-300";
+      ? "fixed w-full backdrop-blur-md bg-white/70 shadow-lg z-[999] transition-all duration-300"
+      : "fixed w-full bg-transparent z-[999] transition-all duration-300";
 
   const menuItems = [
     { title: "About", path: "#about" },

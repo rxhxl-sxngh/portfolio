@@ -45,7 +45,7 @@ const TeachingAssistantDetailPanel = ({ isOpen, onClose }) => {
       className="fixed inset-x-0 bottom-0 z-50 flex justify-end"
       style={{
         zIndex: 50,
-        top: "4rem", // Set to 2rem as requested
+        top: "4rem",
       }}
     >
       {/* Backdrop */}

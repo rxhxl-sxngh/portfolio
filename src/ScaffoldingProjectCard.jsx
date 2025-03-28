@@ -145,7 +145,7 @@ const ScaffoldingProjectCard = () => {
         <div 
           className="fixed inset-x-0 bottom-0 z-50 flex justify-end" 
           style={{ 
-            zIndex: 9999,
+            zIndex: 50,
             top: '2rem' // Set to 2rem to keep navbar visible
           }}
         >
