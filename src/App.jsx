@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import Projects from "./Projects";
 import ExperienceSection from "./ExperienceSection";
-import PhotographySection from "./PhotographySection";
+import BlogSection from "./BlogSection";
 import Footer from "./Footer";
 
 const App = () => {
@@ -26,8 +26,8 @@ const App = () => {
         {/* Experience Section */}
         <ExperienceSection />
 
-        {/* Photography Section */}
-        <PhotographySection />
+        {/* Blog Section */}
+        <BlogSection />
 
         {/* Footer */}
         <Footer />
