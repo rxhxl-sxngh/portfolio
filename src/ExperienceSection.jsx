@@ -1,21 +1,49 @@
-import React from 'react';
-import { ExperienceCard } from './Cards';
+import React, { useState } from "react";
+import NTTDataDetailPanel from "./NTTDataDetailPanel";
+import TeachingAssistantDetailPanel from "./TeachingAssistantDetailPanel";
+
+// Custom ExperienceCard component with click handler
+const ExperienceCard = ({ title, company, period, onClick }) => (
+  <div
+    className="group relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer"
+    onClick={onClick}
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+    <h3 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+      <span className="border-b border-transparent group-hover:border-indigo-600 transition-all duration-300">
+        {title}
+      </span>
+    </h3>
+    <p className="text-gray-600 mt-1">{company}</p>
+    <p className="text-gray-500 text-sm mt-1">{period}</p>
+  </div>
+);
 
 const ExperienceSection = () => {
+  const [activePanel, setActivePanel] = useState(null);
+
   const experiences = [
     {
       title: "AI/ML Engineer",
       company: "NTT Data Corporation",
-      description:
-        "Developed and implemented an NLP-driven application for incident/request resolution prediction, trained on two years of ticket data, and integrated the solution into ITSM platforms across 15+ client accounts.",
+      period: "January 2024 - December 2024",
+      panelType: "ntt-data",
     },
     {
       title: "Teaching Assistant",
-      company: "CSCE 121 - Texas A&M University",
-      description:
-        "Produced material and conducted lab sessions teaching students about Data Structures and Algorithms, while offering guidance on using various data structures through hands-on programming projects.",
+      company: "Texas A&M University",
+      period: "August 2023 - May 2024",
+      panelType: "teaching-assistant",
     },
   ];
+
+  const handleCardClick = (panelType) => {
+    setActivePanel(panelType);
+  };
+
+  const handleClosePanel = () => {
+    setActivePanel(null);
+  };
 
   return (
     <section id="experience" className="min-h-screen flex items-center py-20">
@@ -25,10 +53,24 @@ const ExperienceSection = () => {
         </h2>
         <div className="space-y-8">
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} {...experience} />
+            <ExperienceCard
+              key={index}
+              {...experience}
+              onClick={() => handleCardClick(experience.panelType)}
+            />
           ))}
         </div>
       </div>
+
+      {/* Detail Panels */}
+      <NTTDataDetailPanel
+        isOpen={activePanel === "ntt-data"}
+        onClose={handleClosePanel}
+      />
+      <TeachingAssistantDetailPanel
+        isOpen={activePanel === "teaching-assistant"}
+        onClose={handleClosePanel}
+      />
     </section>
   );
 };
