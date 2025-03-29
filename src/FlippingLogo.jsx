@@ -17,8 +17,11 @@ const FlippingLogo = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Pulsing ring indicator */}
-      <div className={`absolute inset-0 rounded-full border-4 border-purple-500/50 ${isHovered ? 'scale-105 animate-pulse' : ''} transition-all duration-300`}></div>
+      {/* Enhanced pulsing ring indicator */}
+      <div className={`absolute inset-0 rounded-full ${isHovered 
+        ? 'border-8 border-purple-500 scale-105 animate-pulse shadow-lg shadow-purple-500/50' 
+        : 'border-4 border-purple-500 scale-105 shadow-md shadow-purple-500/30 animate-pulse'} 
+        transition-all duration-300`}></div>
       
       {/* 3D container with enhanced perspective */}
       <div className={`relative w-full h-full transition-all duration-1000 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''} ${isFlipped ? 'scale-110' : 'scale-100'}`}>
