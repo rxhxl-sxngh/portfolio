@@ -107,79 +107,147 @@ const PersonalGrowthBlogPanel = ({ isOpen, onClose }) => {
           {/* Blog content */}
           <div className="prose prose-indigo max-w-none">
             <p className="text-gray-600 leading-relaxed">
-              Looking back at 2024, I can confidently say it was the most eventful and transformative year of my life. From starting my role as an AI/ML Engineer at NTT Data to co-founding Quaternion Studios, the year was filled with incredible highs, challenging lows, and countless opportunities for growth.
+              Looking back at 2024, I can confidently say it was the most challenging and transformative year of my life. It was a roller coaster of triumphs and tribulations that pushed me to my limits and taught me invaluable lessons about myself, my priorities, and what truly matters in my professional journey.
             </p>
 
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Beginning: Stepping into the Professional World</h3>
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">January: Juggling Multiple Roles</h3>
             
             <p className="text-gray-600 leading-relaxed">
-              January 2024 marked the beginning of my journey at NTT Data Corporation. Fresh out of my junior year internship and with a year left of college, I was both excited and nervous about balancing my first professional role alongside my studies. The learning curve was steep – working with enterprise-level AI systems and developing NLP solutions for real-world applications was vastly different from academic projects.
+              The year kicked off with a sprint rather than a gentle start. I began my role as an AI/ML Engineer at NTT Data in January while maintaining my status as a full-time student at Texas A&M and continuing my position as an undergraduate teaching assistant. The hybrid arrangement with NTT seemed perfect on paper—I'd work remotely during the semester and transition to in-office during summer.
             </p>
             
             <p className="text-gray-600 leading-relaxed">
-              I still remember the feeling of impostor syndrome during those first few weeks. Surrounded by experienced professionals, I questioned whether I truly belonged there. But looking back, those moments of doubt were essential for my growth. They pushed me to work harder, learn faster, and seek guidance when needed.
-            </p>
-
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Pivot: Founding Quaternion Studios</h3>
-            
-            <p className="text-gray-600 leading-relaxed">
-              By September, while maintaining my role at NTT Data, I took perhaps the biggest leap of faith in my life – co-founding Quaternion Studios. The decision wasn't easy, but my passion for 3D graphics and web development, combined with the opportunity to build something from the ground up, was too compelling to ignore.
-            </p>
-            
-            <p className="text-gray-600 leading-relaxed">
-              The early days of Quaternion were a blur of excitement, anxiety, and countless late nights. Pitching to potential clients, managing project timelines, and delivering high-quality solutions – all while maintaining my corporate job and academic responsibilities – tested my limits in ways I hadn't experienced before.
-            </p>
-            
-            <p className="text-gray-600 leading-relaxed">
-              Our first client project was particularly memorable. A week before the deadline, we encountered a critical technical issue that threatened the entire deliverable. The team worked tirelessly for 48 hours straight, fueled by determination and perhaps too much coffee. When we finally resolved the issue and delivered the project on time, the sense of accomplishment was indescribable.
+              Those first few weeks were equal parts exhilarating and exhausting. I'd bounce from morning classes to afternoon meetings with enterprise clients, then spend evenings preparing for the lab sessions I led as a TA. I remember sitting in my apartment at midnight, surrounded by half-finished assignments and work deliverables, wondering if I'd bitten off more than I could chew.
             </p>
 
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Balance: Teaching and Learning Simultaneously</h3>
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The International Scheduling Challenge</h3>
             
             <p className="text-gray-600 leading-relaxed">
-              Alongside these professional endeavors, my role as a Teaching Assistant at Texas A&M provided a different kind of fulfillment. Guiding students through the complexities of data structures and algorithms not only reinforced my own understanding but also revealed my passion for mentorship.
+              Working for an international company like NTT Data came with its own unique challenges—namely, the brutal time zone differences. There were several occasions when I'd be on calls at 3 AM with development teams based in Asia, only to drag myself out of bed a few hours later for the 8 AM lab I was responsible for leading.
             </p>
             
             <p className="text-gray-600 leading-relaxed">
-              One particular student stands out in my memory – struggling with the concepts initially but showing remarkable improvement throughout the semester. Witnessing his growth and knowing I played a small part in it was immensely rewarding. It reminded me that success isn't just about personal achievements but also about the positive impact we have on others.
-            </p>
-
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Challenges: Lessons in Resilience</h3>
-            
-            <p className="text-gray-600 leading-relaxed">
-              2024 wasn't without its challenges. Managing multiple commitments often meant sacrificing personal time and sleep. There were moments of burnout where I questioned whether I had taken on too much. A particularly difficult period came mid-year when a major project at Quaternion faced significant setbacks, coinciding with final exams and deliverables at NTT Data.
-            </p>
-            
-            <p className="text-gray-600 leading-relaxed">
-              These challenges taught me invaluable lessons about prioritization, delegation, and the importance of self-care. I learned that asking for help isn't a sign of weakness but a necessary aspect of growth and leadership. Most importantly, I discovered my own resilience – the ability to persevere through difficulties and emerge stronger on the other side.
+              I still vividly remember one particularly grueling week in February when I had three consecutive nights of late calls followed by early morning commitments. I was running on pure caffeine and determination, my eyes burning from lack of sleep as I tried to explain pointer concepts to my students while my brain was still processing discussions about NLP model optimizations from hours earlier.
             </p>
 
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Growth: Technical and Personal Development</h3>
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">March: Recognition Amidst Chaos</h3>
             
             <p className="text-gray-600 leading-relaxed">
-              Technically, my skills expanded exponentially throughout 2024. At NTT Data, I delved deep into machine learning models, particularly in NLP and the emerging field of Retrieval-Augmented Generation. Through Quaternion Studios, I honed my expertise in 3D graphics, WebGPU, and building scalable web applications.
+              As the semester progressed, the weight of my commitments became increasingly difficult to bear. Just when I was questioning whether all the sacrifice was worth it, I received some unexpected validation. In March, the Computer Science Department at A&M recognized me with the Undergraduate Leadership Excellence Award—an honor I'd mentioned in my previous blog, but one that came at a perfectly timed moment when I needed that affirmation.
             </p>
             
             <p className="text-gray-600 leading-relaxed">
-              But the most significant growth was personal rather than technical. I developed a stronger sense of confidence in my abilities and decisions. My communication skills improved dramatically – from explaining complex technical concepts to clients to negotiating project terms and managing team dynamics.
-            </p>
-            
-            <p className="text-gray-600 leading-relaxed">
-              Perhaps most importantly, I gained clarity about my long-term goals and values. The diverse experiences of 2024 helped me understand what truly matters to me professionally: creating innovative technology that solves real problems, working with passionate people, and continuing to learn and evolve.
+              Standing on that stage, accepting the award while running on three hours of sleep, was a surreal moment. It felt like acknowledgment that yes, what I was doing was difficult, but it was also meaningful and noticed.
             </p>
 
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">Looking Ahead: Building on the Foundation</h3>
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Inevitable Breaking Point</h3>
             
             <p className="text-gray-600 leading-relaxed">
-              As I move forward into 2025, I carry with me the lessons and experiences of this transformative year. I'm excited to see how Quaternion Studios continues to grow, how my final year at Texas A&M unfolds, and what new opportunities emerge on the horizon.
+              Despite that boost of confidence, reality eventually caught up with me. As my first semester of 2024 progressed, I became overwhelmed by the competing demands on my time and energy. The breaking point came when I realized I was consistently missing lectures for two of my classes due to recurring conflicts with important meetings at NTT Data.
             </p>
             
             <p className="text-gray-600 leading-relaxed">
-              If 2024 taught me anything, it's that growth happens outside of comfort zones, that failure is often the precursor to success, and that with determination and support, ambitious goals are within reach. I'm grateful for the challenges, opportunities, and relationships that made this year so significant, and I'm eager to continue this journey of learning and transformation.
+              Making the decision to drop those two classes was incredibly difficult. It felt like admitting defeat, like I couldn't handle what I'd set out to do. But looking back, it was my first lesson of the year in setting realistic expectations and making necessary sacrifices to preserve my wellbeing and the quality of my work.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              The sweet victory came at the end of the semester when I managed to earn all A's in my remaining classes. It wasn't the full course load I'd ambitiously planned, but it represented quality over quantity—a concept I'd continue to wrestle with throughout the year.
+            </p>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">Summer: A Different Kind of Busy</h3>
+            
+            <p className="text-gray-600 leading-relaxed">
+              Summer brought a shift in rhythm but not necessarily a lighter workload. I transitioned to working in-person at NTT Data, which eliminated the late-night international calls but introduced longer days at the office and a daily commute.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              My free time wasn't exactly "free" either—I dedicated much of it to working on the scaffolding project for a client through Quaternion Studios. Weekends became precious commodities spent hunched over my laptop, diving deep into 3D modeling and web graphics development.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              Despite the busy schedule, there was something refreshing about the change of pace. The more consistent hours and the diversity of projects kept me engaged and growing professionally in different directions.
+            </p>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">August: Personal Upheaval and Rewarding Myself</h3>
+            
+            <p className="text-gray-600 leading-relaxed">
+              August marked a significant turning point in both my personal and professional life. After two years together, my girlfriend and I broke up—a painful but necessary conclusion to a relationship that had been strained by my increasingly demanding schedule and shifting priorities.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              In the wake of that emotional upheaval, and feeling burnt out from months of relentless work, I decided to do something completely uncharacteristic for me. Fueled partly by beneficial tax returns for electric vehicles and a limited-time 1.99% APR deal expiring at the end of August, I made my first major "adult" purchase—a Tesla.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              Was it the most financially prudent decision? Perhaps not. But sitting behind the wheel of that car represented something important to me at that moment—a tangible reward for my hard work, a symbol of my independence, and honestly, a much-needed boost to my spirits during a difficult time.
+            </p>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">Fall Semester: History Repeats Itself</h3>
+            
+            <p className="text-gray-600 leading-relaxed">
+              As the fall semester began, I found myself back in the familiar juggling act between NTT Data and my academic commitments. My course load was particularly heavy, partly due to needing to make up for the classes I'd dropped in the spring.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              September brought one victory: the successful conclusion of our scaffolding project for Quaternion Studios' client. Seeing that project through to completion, with the client's enthusiastic approval, was deeply satisfying.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              But history has a way of repeating itself when we don't fully learn its lessons. Once again, I found myself struggling to balance my professional and academic responsibilities. Once again, I made the difficult decision to drop a class rather than compromise on quality or my wellbeing.
+            </p>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Realization</h3>
+            
+            <p className="text-gray-600 leading-relaxed">
+              As the semester wound down and I reflected on the year, something crystallized for me. While my role at NTT Data had been rewarding in many ways—the technical challenges, the exposure to enterprise-level AI implementations, the credibility of working for an international company—I realized I wanted something different for my future.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed font-bold">
+              I wanted to be somewhere where I could contribute to culture just as much as the end product.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              This wasn't just about technical work or building impressive systems. I wanted to be part of shaping an environment, influencing how teams collaborated, and building something with values aligned with my own. At NTT, I was a small cog in an enormous machine. I'd learned tremendously, but I couldn't see a path to having the kind of impact I now knew I wanted.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              With another semester of all A's in my remaining courses (a achievement I'm still proud of given the circumstances), I made my decision. I resigned from my position at NTT Data as the semester came to a close.
+            </p>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">Lessons from a Year of Growth</h3>
+            
+            <p className="text-gray-600 leading-relaxed">
+              Looking back at 2024, I can identify several invaluable lessons that will guide me moving forward:
+            </p>
+            
+            <ol className="list-decimal text-gray-600 mt-4 ml-8 space-y-3">
+              <li>
+                <span className="font-semibold">Quality over quantity is not just a saying—it's a survival strategy.</span> Taking on too much doesn't serve anyone well, least of all yourself. I learned to be more selective about my commitments and to give my full attention to fewer things rather than spreading myself too thin.
+              </li>
+              <li>
+                <span className="font-semibold">Professional growth isn't linear.</span> Sometimes you need to take steps sideways or even backwards to ultimately move forward. Leaving NTT wasn't a failure; it was a recalibration based on a clearer understanding of what I truly value.
+              </li>
+              <li>
+                <span className="font-semibold">Sleep is non-negotiable.</span> Those 3 AM calls followed by 8 AM labs took a toll that no amount of caffeine could offset. I've learned to prioritize rest as an essential component of sustainable performance.
+              </li>
+              <li>
+                <span className="font-semibold">Personal milestones matter.</span> Buying my Tesla might seem trivial compared to professional accomplishments, but it represented an important personal milestone and a moment of joy during a difficult time.
+              </li>
+              <li>
+                <span className="font-semibold">Culture and values alignment are as important as technical challenges.</span> This was perhaps my biggest realization—that where and how I work matters just as much as what I'm working on.
+              </li>
+            </ol>
+
+            <p className="text-gray-600 leading-relaxed mt-8">
+              As I step into 2025, I feel both humbled by the challenges of the past year and optimistic about what lies ahead. I'm carrying forward not just new technical skills from my time at NTT Data and Quaternion Studios, but a much deeper understanding of my own limits, values, and aspirations.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              The road wasn't straight, and it certainly wasn't always smooth, but every twist, turn, and bump has shaped me into someone better equipped to navigate whatever comes next.
             </p>
             
             <p className="text-gray-600 leading-relaxed mt-8 italic">
-              "The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt
+              Here's to growth, to learning, and to the journey ahead.
             </p>
           </div>
         </div>
