@@ -128,12 +128,12 @@ const GivingBlogPanel = ({ isOpen, onClose }) => {
               One of the most rewarding initiatives was my involvement with the Brazos Valley Hospice Happening fundraiser. Working alongside an incredible team of volunteers, we organized an event that raised thousands of dollars to support hospice care for patients and families in our community during their most vulnerable moments.
             </p>
 
-            {/* Image placeholder for Brazos Valley Hospice Happening */}
+            {/* Brazos Valley Hospice Happening image */}
             <div className="bg-gray-100 rounded-lg p-4 my-8">
-              <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
-                {/* <p className="text-gray-500">Image: Brazos Valley Hospice Happening Fundraiser</p> */}
+              <div className="h-96 w-full flex items-center justify-center">
+                <img src={hospice} alt="Brazos Valley Hospice Happening Fundraiser" className="h-full max-w-full object-contain rounded" />
               </div>
-              <p className="text-sm text-gray-500 italic mt-2 text-center">At the Brazos Valley Hospice Happening fundraiser, where our team helped raise thousands of dollars to support compassionate end-of-life care for patients and families in need.</p>
+              <p className="text-sm text-gray-500 italic mt-2 text-center">Sitting in front of my team at the Brazos Valley Hospice Happening fundraiser, where my team helped raise thousands of dollars to support compassionate end-of-life care for patients and families in need.</p>
             </div>
 
             <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">Von Miller's Gig 'Em Gala: A Highlight of My Service Journey</h3>
@@ -150,12 +150,12 @@ const GivingBlogPanel = ({ isOpen, onClose }) => {
               By the end of the evening, we had raised over $300,000 – funds that would directly impact the lives of children who otherwise wouldn't have access to proper vision care. The number itself was impressive, but what stayed with me was something deeper: the realization that my skills in organization, communication, and leadership could be channeled toward making a tangible difference in people's lives.
             </p>
 
-            {/* Image placeholder for Von Miller's Gig 'Em Gala */}
+            {/* Von Miller's Gig 'Em Gala image */}
             <div className="bg-gray-100 rounded-lg p-4 my-8">
-              <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
-                <p className="text-gray-500">Image: Von Miller's Gig 'Em Gala Fundraiser</p>
+              <div className="h-96 w-full flex items-center justify-center">
+                <img src={vons} alt="Von Miller's Gig 'Em Gala Fundraiser" className="h-full max-w-full object-contain rounded" />
               </div>
-              <p className="text-sm text-gray-500 italic mt-2 text-center">At the Von Miller's Gig 'Em Gala auction, where our team helped raise over $300,000 for children in need of vision care.</p>
+              <p className="text-sm text-gray-500 italic mt-2 text-center">At the Von Miller's Gig 'Em Gala auction, where our team worked with Super Bowl L MVP Von Miller to raise over $300,000 for children in need of vision care.</p>
             </div>
 
             <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Undergraduate Leadership Excellence Award</h3>
@@ -168,23 +168,22 @@ const GivingBlogPanel = ({ isOpen, onClose }) => {
               I'm particularly grateful to Dr. Hyunyoung Lee, who played a major role in my receiving this award. Her mentorship and encouragement pushed me to excel not only in my technical pursuits but also in finding ways to use those skills to benefit others and the broader community.
             </p>
 
-            {/* Image placeholders for Community Service and Leadership Award side by side */}
+            {/* Community Service and Leadership Award images side by side */}
             <div className="my-8 bg-gray-100 rounded-lg p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-100 rounded-lg p-4">
-                  <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
-                    <p className="text-gray-500">Image: Leadership Award Ceremony</p>
+                  <div className="h-96 w-full flex items-center justify-center">
+                    <img src={leadership1} alt="Leadership Award Ceremony 1" className="h-full max-w-full object-contain rounded" />
                   </div>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-4">
-                  <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
-                    <p className="text-gray-500">Image: Leadership Award Ceremony</p>
+                  <div className="h-96 w-full flex items-center justify-center">
+                    <img src={leadership2} alt="Leadership Award Ceremony 2" className="h-full max-w-full object-contain rounded" />
                   </div>
                 </div>
               </div>
               <p className="text-sm text-gray-500 italic mt-4 text-center">
-                Left: Working with fellow volunteers at the College Station Community Food Drive, distributing supplies to over 200 families. 
-                Right: Receiving the Undergraduate Leadership Excellence Award from the Texas A&M Computer Science Department, recognizing both academic achievements and community service efforts.
+                Receiving the Undergraduate Leadership Excellence Award from the Texas A&M Computer Science Department, recognizing both academic achievements and community service efforts.
               </p>
             </div>
 
