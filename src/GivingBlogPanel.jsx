@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import { Calendar, Heart } from 'lucide-react';
+import  vons from "./assets/vonsvision.jpg";
+import leadership1 from "./assets/leadership1.jpg";
+import leadership2 from "./assets/leadership2.jpg";
+import hospice from "./assets/hospice.png";
 
 const GivingBlogPanel = ({ isOpen, onClose }) => {
   // Prevent scrolling on the background when panel is open
@@ -110,10 +114,32 @@ const GivingBlogPanel = ({ isOpen, onClose }) => {
               In the competitive world of computer science and tech startups, it's easy to become fixated on building the next groundbreaking application, landing the perfect job, or mastering the latest programming language. While these pursuits have their place, my most profound lessons have come from somewhere unexpected – giving back to others.
             </p>
 
-            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">How It All Started: Von Miller's Gig 'Em Gala</h3>
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">A Commitment to Service: 100 Hours in One Semester</h3>
             
             <p className="text-gray-600 leading-relaxed">
-              My journey with community service took a significant turn during my sophomore year at Texas A&M when I volunteered to lead the auction fundraiser for Von Miller's Gig 'Em Gala. Super Bowl MVP Von Miller had established Von's Vision, a foundation dedicated to providing eye exams and glasses to underprivileged children.
+              My journey with community service began with small volunteering efforts during my freshman year, but it was during my sophomore year at Texas A&M that I decided to make a more substantial commitment. I challenged myself to complete 100 hours of community service in a single semester – all while maintaining my academic responsibilities and other extracurricular activities.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              These hours were split across various initiatives: volunteering at local food banks, participating in campus clean-up events, tutoring underprivileged students in STEM subjects, and organizing charitable fundraisers. Some weekends, I would dedicate entire days to service projects, returning to my apartment exhausted but fulfilled in a way that coding sessions or exam preparation never quite matched.
+            </p>
+            
+            <p className="text-gray-600 leading-relaxed">
+              One of the most rewarding initiatives was my involvement with the Brazos Valley Hospice Happening fundraiser. Working alongside an incredible team of volunteers, we organized an event that raised thousands of dollars to support hospice care for patients and families in our community during their most vulnerable moments.
+            </p>
+
+            {/* Image placeholder for Brazos Valley Hospice Happening */}
+            <div className="bg-gray-100 rounded-lg p-4 my-8">
+              <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
+                {/* <p className="text-gray-500">Image: Brazos Valley Hospice Happening Fundraiser</p> */}
+              </div>
+              <p className="text-sm text-gray-500 italic mt-2 text-center">At the Brazos Valley Hospice Happening fundraiser, where our team helped raise thousands of dollars to support compassionate end-of-life care for patients and families in need.</p>
+            </div>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">Von Miller's Gig 'Em Gala: A Highlight of My Service Journey</h3>
+            
+            <p className="text-gray-600 leading-relaxed">
+              Among the various service projects I participated in, one particular highlight was leading the auction fundraiser for Von Miller's Gig 'Em Gala. Super Bowl MVP Von Miller had established Von's Vision, a foundation dedicated to providing eye exams and glasses to underprivileged children.
             </p>
             
             <p className="text-gray-600 leading-relaxed">
@@ -123,6 +149,44 @@ const GivingBlogPanel = ({ isOpen, onClose }) => {
             <p className="text-gray-600 leading-relaxed">
               By the end of the evening, we had raised over $300,000 – funds that would directly impact the lives of children who otherwise wouldn't have access to proper vision care. The number itself was impressive, but what stayed with me was something deeper: the realization that my skills in organization, communication, and leadership could be channeled toward making a tangible difference in people's lives.
             </p>
+
+            {/* Image placeholder for Von Miller's Gig 'Em Gala */}
+            <div className="bg-gray-100 rounded-lg p-4 my-8">
+              <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
+                <p className="text-gray-500">Image: Von Miller's Gig 'Em Gala Fundraiser</p>
+              </div>
+              <p className="text-sm text-gray-500 italic mt-2 text-center">At the Von Miller's Gig 'Em Gala auction, where our team helped raise over $300,000 for children in need of vision care.</p>
+            </div>
+
+            <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Undergraduate Leadership Excellence Award</h3>
+
+            <p className="text-gray-600 leading-relaxed">
+              My dedication to community service, combined with my academic achievements and other leadership roles, ultimately contributed to my receiving the Undergraduate Leadership Excellence Award from the Texas A&M Computer Science Department. This honor is one that I deeply cherish not merely for the recognition itself, but for what it represents: the validation that technical excellence and community service aren't separate paths but complementary journeys.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              I'm particularly grateful to Dr. Hyunyoung Lee, who played a major role in my receiving this award. Her mentorship and encouragement pushed me to excel not only in my technical pursuits but also in finding ways to use those skills to benefit others and the broader community.
+            </p>
+
+            {/* Image placeholders for Community Service and Leadership Award side by side */}
+            <div className="my-8 bg-gray-100 rounded-lg p-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
+                    <p className="text-gray-500">Image: Leadership Award Ceremony</p>
+                  </div>
+                </div>
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <div className="bg-gray-200 h-64 w-full flex items-center justify-center">
+                    <p className="text-gray-500">Image: Leadership Award Ceremony</p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 italic mt-4 text-center">
+                Left: Working with fellow volunteers at the College Station Community Food Drive, distributing supplies to over 200 families. 
+                Right: Receiving the Undergraduate Leadership Excellence Award from the Texas A&M Computer Science Department, recognizing both academic achievements and community service efforts.
+              </p>
+            </div>
 
             <h3 className="text-lg font-bold text-indigo-600 mt-8 mb-4">The Robotics Team: Beyond Technical Skills</h3>
             
