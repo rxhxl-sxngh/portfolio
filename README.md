@@ -77,7 +77,7 @@ Senior Computer Science student at Texas A&M University with a passion for devel
   <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
 </p>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Books" width="25" height="25" /> Relevant Coursework
+<!-- ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Books" width="25" height="25" /> Relevant Coursework
 
 <p align="left">
   <img src="https://img.shields.io/badge/Data_Structures-007396?style=for-the-badge" alt="Data Structures" />
@@ -87,7 +87,7 @@ Senior Computer Science student at Texas A&M University with a passion for devel
   <img src="https://img.shields.io/badge/Machine_Learning-FF6F00?style=for-the-badge" alt="Machine Learning" />
   <img src="https://img.shields.io/badge/Artificial_Intelligence-3776AB?style=for-the-badge" alt="Artificial Intelligence" />
   <img src="https://img.shields.io/badge/Computational_Data_Science-00ADD8?style=for-the-badge" alt="Computational Data Science" />
-</p>
+</p> -->
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Globe%20with%20Meridians.png" alt="Globe with Meridians" width="25" height="25" /> Connect With Me
 
